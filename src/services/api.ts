@@ -10,7 +10,8 @@ export function setupAPIClient(ctx = undefined) {
     const api = axios.create({
         baseURL: "https://restaurants-system-backend.herokuapp.com/",
         headers: {
-            Authorization: `Bearer ${cookies['@nextauth.token']}`
+            'Access-Control-Allow-Origin':'*',
+            Authorization: `Bearer ${cookies['@nextauth.token']}`,
         }
     })
 
