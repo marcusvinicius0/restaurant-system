@@ -4,7 +4,7 @@ import Head from "next/head";
 import Image from "next/image";                //propria tag <img/> do next;
 import styles from '../../../styles/home.module.scss';
 
-import logoImg from '../../../public/logo.png';
+import logoImg from '../../../public/logo2.png';
 
 import { Input } from '../../components/ui/Input';
 import { Button } from '../../components/ui/Button';
