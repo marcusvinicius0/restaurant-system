@@ -75,13 +75,12 @@ export function AuthProvider({ children }: AuthProviderProps){
 
     }, [])
 
-   async function signIn({ email, password}: SignInProps){
+   async function signIn({ email, password }: SignInProps){
         try{
             const response = await api.post('/session', {
                 email,
-                password
+                password,
             }) 
-            // console.log(response.data);
 
             const { id, name, token } = response.data;
 

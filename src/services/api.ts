@@ -8,9 +8,9 @@ export function setupAPIClient(ctx = undefined) {
     let cookies = parseCookies(ctx);
 
     const api = axios.create({
-        baseURL: "https://restaurants-system-backend.herokuapp.com/",
+        baseURL: 'http://localhost:3001/',
+        // baseURL: 'https://sistemas-restaurante.herokuapp.com/',
         headers: {
-            'Access-Control-Allow-Origin':'*',
             Authorization: `Bearer ${cookies['@nextauth.token']}`,
         }
     })

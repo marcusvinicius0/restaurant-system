@@ -26,6 +26,8 @@ export default function Home() {
   async function handleLogin(event: FormEvent) {
     event.preventDefault();
 
+    
+    
     if (email === '' || password === '') {
       toast.warning("Preencha todos os campos!")
       return;
