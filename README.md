@@ -2,7 +2,7 @@
 
 <img src="./src/assets/sistemas-pizzaria.gif" alt="gif-sistemas" />
 
->Projeto sistema para restaurantes e/ou pizzaria.
+>Projeto sistema para restaurantes e/ou pizzaria. <br/>
 >Tecnologias usadas: Next.js, React.js, Typescript, Node.js, Sass
 >Banco de dados: postgresql
 
