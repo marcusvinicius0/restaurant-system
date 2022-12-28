@@ -38,15 +38,6 @@ type AuthProviderProps = {
 
 export const AuthContext = createContext({} as AuthContextData)
 
-export function signOut(){
-    try{
-        destroyCookie(undefined, '@nextauth.token')
-        Router.push('/')
-    }catch{
-        console.log('error ao deslogar')
-    }
-}
-
 export function AuthProvider({ children }: AuthProviderProps){
     const [user, setUser] = useState<UserProps>()
     const isAuthenticated = !!user;    // !! = convertendo para false se não tiver nenhum valor dentro
@@ -74,6 +65,15 @@ export function AuthProvider({ children }: AuthProviderProps){
 
 
     }, [])
+    
+    export function signOut(){
+        try{
+            destroyCookie(undefined, '@nextauth.token')
+            Router.push('/')
+        }catch{
+        console.log('error ao deslogar')
+        }
+    }
 
    async function signIn({ email, password }: SignInProps){
         try{
